@@ -1,0 +1,15 @@
+platform :ios, '9.0'
+
+target 'GPXPlayerViewExample' do
+  
+  use_frameworks!
+
+  # Pods for GPXPlayerViewExample
+  pod 'GPXPlayerView', :path => '..'
+  
+  target 'GPXPlayerViewExampleUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

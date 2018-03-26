@@ -1,0 +1,22 @@
+PODS:
+  - GPXPlayerView (0.0.1):
+    - RxSwift (~> 4)
+    - SWXMLHash (~> 4)
+  - RxSwift (4.1.2)
+  - SWXMLHash (4.6.0)
+
+DEPENDENCIES:
+  - GPXPlayerView (from `..`)
+
+EXTERNAL SOURCES:
+  GPXPlayerView:
+    :path: ..
+
+SPEC CHECKSUMS:
+  GPXPlayerView: 4cada220b000686a08a4567d20c7731ec33175fc
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
+  SWXMLHash: 3c39a53723202800e9e1a87f14b2fe7ac1da98ec
+
+PODFILE CHECKSUM: 75197ce85e9a65455298f9726b8c80c575ca11df
+
+COCOAPODS: 1.4.0
