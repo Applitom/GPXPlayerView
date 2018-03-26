@@ -1,0 +1,3 @@
+[submodule "GpxKit"]
+	path = GpxKit
+	url = https://github.com/Applitom/GpxKit.git
