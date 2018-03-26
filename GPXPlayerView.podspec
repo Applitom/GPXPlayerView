@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios
 
-  s.source       = { :git => "http://github.com/applitom/GPXPlayerView.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/Applitom/GPXPlayerView.git", :tag => "#{s.version}",:submodules => true }
   s.source_files = "GPXPlayerView/*.swift","GpxKit/GpxKit/*.swift"
   s.framework  = "Foundation"
   
