@@ -11,6 +11,7 @@ import MapKit
 
 public class GPXPlayerView: UIView {
     
+    public var playerTrackImage: UIImage?
     private var currentTrackAnnotation: MKPointAnnotation?
     private let gpxPlayerViewPresenter = GPXPlayerViewPresenter()
     private let mapView: MKMapView = MKMapView()
@@ -84,6 +85,29 @@ extension GPXPlayerView: MKMapViewDelegate{
         polylineRenderer.strokeColor = UIColor.blue
         polylineRenderer.lineWidth = 3
         return polylineRenderer
+    }
+    
+    public func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard self.playerTrackImage != nil else {
+            return nil
+        }
+        
+        if annotation is MKUserLocation {
+            return nil
+        }
+        
+        let identifier = "TrackAnnotation"
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+        
+        if annotationView == nil {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView?.canShowCallout = true
+            annotationView?.image = playerTrackImage
+        } else {
+            annotationView?.annotation = annotation
+        }
+        
+        return annotationView
     }
 }
 
