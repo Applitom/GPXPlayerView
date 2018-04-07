@@ -7,3 +7,14 @@
 //
 
 import Foundation
+import CoreLocation
+
+protocol GPXPlayerViewProtocol: class {
+    
+    func addTrackToMap(track: [CLLocationCoordinate2D])
+    func setMapCenter(center: CLLocationCoordinate2D)
+    func zoomToFit(track: [CLLocationCoordinate2D])
+    func initPlayer()
+    func moveCurrentTrackLocation(currentTrackLocation: CLLocationCoordinate2D)
+    func removeCurrentTrakLocationMarkFromMap()
+}

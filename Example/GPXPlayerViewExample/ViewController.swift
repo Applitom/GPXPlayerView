@@ -27,5 +27,17 @@ class ViewController: UIViewController {
         let gpxURL = Bundle(for: ViewController.self).url(forResource: "Sample", withExtension: "gpx")
         self.gpxPlayerView.loadGPXFile(fromURL: gpxURL!)
     }
+    
+    @IBAction func stopPressed(_ sender: Any) {
+        self.gpxPlayerView.stop()
+    }
+    
+    @IBAction func playPressed(_ sender: Any) {
+        self.gpxPlayerView.play()
+    }
+    
+    @IBAction func pauseResumePressed(_ sender: Any) {
+        self.gpxPlayerView.pauseResume()
+    }
 }
 

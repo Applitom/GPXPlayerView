@@ -9,7 +9,85 @@
 import UIKit
 import MapKit
 
-fileprivate extension UIView
+public class GPXPlayerView: UIView {
+    
+    private var currentTrackAnnotation: MKPointAnnotation?
+    private let gpxPlayerViewPresenter = GPXPlayerViewPresenter()
+    private let mapView: MKMapView = MKMapView()
+    
+    override public func awakeFromNib() {
+        super.awakeFromNib()
+        self.gpxPlayerViewPresenter.attachView(view: self)
+        self.setupMapView()
+    }
+    
+    private func setupMapView(){
+        self.mapView.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(self.mapView)
+        self.fillWithView(self.mapView)
+        self.mapView.delegate = self
+    }
+    
+    public func loadGPXFile(fromURL url:URL){
+        self.gpxPlayerViewPresenter.loadGPXFile(fromURL: url)
+    }
+    
+    public func play(){
+        self.gpxPlayerViewPresenter.play()
+    }
+    
+    public func stop(){
+        self.gpxPlayerViewPresenter.stop()
+    }
+    
+    public func pauseResume(){
+        self.gpxPlayerViewPresenter.pauseResume()
+    }
+}
+
+// MARK: --- GPXPlayerViewProtocol ---
+extension GPXPlayerView: GPXPlayerViewProtocol{
+    func initPlayer() {
+        self.currentTrackAnnotation = MKPointAnnotation()
+        self.mapView.addAnnotation(self.currentTrackAnnotation!)
+    }
+    
+    func moveCurrentTrackLocation(currentTrackLocation: CLLocationCoordinate2D) {
+        self.currentTrackAnnotation?.coordinate = currentTrackLocation
+    }
+    
+    func removeCurrentTrakLocationMarkFromMap(){
+        guard self.currentTrackAnnotation != nil else { return }
+        self.mapView.removeAnnotation(self.currentTrackAnnotation!)
+        self.currentTrackAnnotation = nil
+    }
+    
+    func addTrackToMap(track: [CLLocationCoordinate2D]) {
+        let polyline = MKPolyline(coordinates: track, count: track.count)
+        self.mapView.add(polyline)
+    }
+    
+    func setMapCenter(center: CLLocationCoordinate2D) {
+        self.mapView.setCenter(center, animated: true)
+    }
+    
+    func zoomToFit(track: [CLLocationCoordinate2D]){
+        let polyline = MKPolyline(coordinates: track, count: track.count)
+        self.mapView.setVisibleMapRect(polyline.boundingMapRect, animated: true)
+    }
+}
+// MARK: --- MKMapViewDelegate ---
+extension GPXPlayerView: MKMapViewDelegate{
+    public func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let polylineRenderer = MKPolylineRenderer(overlay: overlay)
+        polylineRenderer.strokeColor = UIColor.blue
+        polylineRenderer.lineWidth = 3
+        return polylineRenderer
+    }
+}
+
+// MARK: --- View Helpers ---
+extension GPXPlayerView
 {
     fileprivate func fillWithView(_ view: UIView){
         let viewDict = ["view" : view]
@@ -36,42 +114,5 @@ fileprivate extension UIView
         self.addConstraints(verticalConstraints)
         
         self.layoutIfNeeded()
-    }
-}
-
-public class GPXPlayerView: UIView {
-
-    let mapView: MKMapView = MKMapView()
-    
-    override public func awakeFromNib() {
-        super.awakeFromNib()
-        self.setupMapView()
-    }
-    
-    private func setupMapView(){
-        self.mapView.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(self.mapView)
-        self.fillWithView(self.mapView)
-        self.mapView.delegate = self
-    }
-    
-    public func loadGPXFile(fromURL url:URL){
-        let gpxData = try! Data(contentsOf: url)
-        let gpxFile = try! Gpx(data: gpxData)
-        
-        for currentTrack in gpxFile.track! {
-            var locations = currentTrack.map { $0.coordinate }
-            let polyline = MKPolyline(coordinates: &locations, count: locations.count)
-            self.mapView.add(polyline)
-        }
-    }
-}
-
-extension GPXPlayerView: MKMapViewDelegate{
-    public func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        let polylineRenderer = MKPolylineRenderer(overlay: overlay)
-        polylineRenderer.strokeColor = UIColor.blue
-        polylineRenderer.lineWidth = 3
-        return polylineRenderer
     }
 }
