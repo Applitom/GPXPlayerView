@@ -17,6 +17,7 @@ Pod::Spec.new do |s|
   s.social_media_url   = "http://twitter.com/applitom"
 
   s.platform     = :ios
+  s.ios.deployment_target  = '9.0'
 
   s.source       = { :git => "https://github.com/Applitom/GPXPlayerView.git", :tag => "#{s.version}",:submodules => true }
   s.source_files = "GPXPlayerView/*.swift","GpxKit/*.swift"

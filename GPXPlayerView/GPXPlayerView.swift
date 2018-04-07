@@ -26,6 +26,7 @@ public class GPXPlayerView: UIView {
         self.addSubview(self.mapView)
         self.fillWithView(self.mapView)
         self.mapView.delegate = self
+        self.mapView.mapType = .hybridFlyover
     }
     
     public func loadGPXFile(fromURL url:URL){
