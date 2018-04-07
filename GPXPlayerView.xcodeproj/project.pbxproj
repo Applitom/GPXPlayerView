@@ -15,13 +15,12 @@
 		F142994620680A62007038CE /* GPXPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F142994320680A62007038CE /* GPXPlayerView.swift */; };
 		F142994720680A62007038CE /* GPXPlayerViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F142994420680A62007038CE /* GPXPlayerViewPresenter.swift */; };
 		F142994820680A62007038CE /* GPXPlayerViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F142994520680A62007038CE /* GPXPlayerViewProtocol.swift */; };
-		F142998C20696B74007038CE /* GpxWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F142998520696B74007038CE /* GpxWriter.swift */; };
-		F142998D20696B74007038CE /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F142998620696B74007038CE /* DateFormatter+Extensions.swift */; };
-		F142998E20696B74007038CE /* OutputStream+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F142998720696B74007038CE /* OutputStream+Extensions.swift */; };
-		F142998F20696B74007038CE /* GpxKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F142998820696B74007038CE /* GpxKit.h */; };
-		F142999020696B74007038CE /* Gpx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F142998920696B74007038CE /* Gpx.swift */; };
-		F142999120696B74007038CE /* Gpx+Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F142998A20696B74007038CE /* Gpx+Parser.swift */; };
-		F142999220696B74007038CE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F142998B20696B74007038CE /* Info.plist */; };
+		F197CDF920790269004F16CA /* GpxWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F197CDF320790269004F16CA /* GpxWriter.swift */; };
+		F197CDFA20790269004F16CA /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F197CDF420790269004F16CA /* DateFormatter+Extensions.swift */; };
+		F197CDFB20790269004F16CA /* OutputStream+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F197CDF520790269004F16CA /* OutputStream+Extensions.swift */; };
+		F197CDFD20790269004F16CA /* Gpx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F197CDF720790269004F16CA /* Gpx.swift */; };
+		F197CDFE20790269004F16CA /* Gpx+Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F197CDF820790269004F16CA /* Gpx+Parser.swift */; };
+		F197CE0020790346004F16CA /* GPXPlayerView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = F197CDFF20790346004F16CA /* GPXPlayerView.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,13 +47,12 @@
 		F142994320680A62007038CE /* GPXPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPXPlayerView.swift; sourceTree = "<group>"; };
 		F142994420680A62007038CE /* GPXPlayerViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPXPlayerViewPresenter.swift; sourceTree = "<group>"; };
 		F142994520680A62007038CE /* GPXPlayerViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPXPlayerViewProtocol.swift; sourceTree = "<group>"; };
-		F142998520696B74007038CE /* GpxWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GpxWriter.swift; sourceTree = "<group>"; };
-		F142998620696B74007038CE /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
-		F142998720696B74007038CE /* OutputStream+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OutputStream+Extensions.swift"; sourceTree = "<group>"; };
-		F142998820696B74007038CE /* GpxKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GpxKit.h; sourceTree = "<group>"; };
-		F142998920696B74007038CE /* Gpx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gpx.swift; sourceTree = "<group>"; };
-		F142998A20696B74007038CE /* Gpx+Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Gpx+Parser.swift"; sourceTree = "<group>"; };
-		F142998B20696B74007038CE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F197CDF320790269004F16CA /* GpxWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GpxWriter.swift; sourceTree = "<group>"; };
+		F197CDF420790269004F16CA /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		F197CDF520790269004F16CA /* OutputStream+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OutputStream+Extensions.swift"; sourceTree = "<group>"; };
+		F197CDF720790269004F16CA /* Gpx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gpx.swift; sourceTree = "<group>"; };
+		F197CDF820790269004F16CA /* Gpx+Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Gpx+Parser.swift"; sourceTree = "<group>"; };
+		F197CDFF20790346004F16CA /* GPXPlayerView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GPXPlayerView.podspec; sourceTree = "<group>"; };
 		F8C24220D30C39095DDEDCEA /* Pods-GPXPlayerView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPXPlayerView.release.xcconfig"; path = "Pods/Target Support Files/Pods-GPXPlayerView/Pods-GPXPlayerView.release.xcconfig"; sourceTree = "<group>"; };
 		FD9943B90DC37C37C773BB39 /* Pods-GPXPlayerViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPXPlayerViewTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GPXPlayerViewTests/Pods-GPXPlayerViewTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,7 +101,8 @@
 		F142991F206809A7007038CE = {
 			isa = PBXGroup;
 			children = (
-				F142998420696B74007038CE /* GpxKit */,
+				F197CDFF20790346004F16CA /* GPXPlayerView.podspec */,
+				F197CDF220790269004F16CA /* GpxKit */,
 				F142992B206809A8007038CE /* GPXPlayerView */,
 				F1429936206809A8007038CE /* GPXPlayerViewTests */,
 				F142992A206809A8007038CE /* Products */,
@@ -142,19 +141,16 @@
 			path = GPXPlayerViewTests;
 			sourceTree = "<group>";
 		};
-		F142998420696B74007038CE /* GpxKit */ = {
+		F197CDF220790269004F16CA /* GpxKit */ = {
 			isa = PBXGroup;
 			children = (
-				F142998520696B74007038CE /* GpxWriter.swift */,
-				F142998620696B74007038CE /* DateFormatter+Extensions.swift */,
-				F142998720696B74007038CE /* OutputStream+Extensions.swift */,
-				F142998820696B74007038CE /* GpxKit.h */,
-				F142998920696B74007038CE /* Gpx.swift */,
-				F142998A20696B74007038CE /* Gpx+Parser.swift */,
-				F142998B20696B74007038CE /* Info.plist */,
+				F197CDF320790269004F16CA /* GpxWriter.swift */,
+				F197CDF420790269004F16CA /* DateFormatter+Extensions.swift */,
+				F197CDF520790269004F16CA /* OutputStream+Extensions.swift */,
+				F197CDF720790269004F16CA /* Gpx.swift */,
+				F197CDF820790269004F16CA /* Gpx+Parser.swift */,
 			);
-			name = GpxKit;
-			path = GpxKit/GpxKit;
+			path = GpxKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,7 +161,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F142993A206809A8007038CE /* GPXPlayerView.h in Headers */,
-				F142998F20696B74007038CE /* GpxKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,7 +176,6 @@
 				F1429925206809A8007038CE /* Frameworks */,
 				F1429926206809A8007038CE /* Headers */,
 				F1429927206809A8007038CE /* Resources */,
-				4564AE796361E430D0BE5BCB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,7 +195,6 @@
 				F142992F206809A8007038CE /* Frameworks */,
 				F1429930206809A8007038CE /* Resources */,
 				D7A9DA17FFB227C7176B3682 /* [CP] Embed Pods Frameworks */,
-				C56E8A79538380205747DE5B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,7 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F142999220696B74007038CE /* Info.plist in Resources */,
+				F197CE0020790346004F16CA /* GPXPlayerView.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,21 +264,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4564AE796361E430D0BE5BCB /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GPXPlayerView/Pods-GPXPlayerView-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B646E5541F6203BEB964EE5F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -302,21 +280,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C56E8A79538380205747DE5B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GPXPlayerViewTests/Pods-GPXPlayerViewTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D7A9DA17FFB227C7176B3682 /* [CP] Embed Pods Frameworks */ = {
@@ -366,12 +329,12 @@
 			files = (
 				F142994720680A62007038CE /* GPXPlayerViewPresenter.swift in Sources */,
 				F142994620680A62007038CE /* GPXPlayerView.swift in Sources */,
-				F142999120696B74007038CE /* Gpx+Parser.swift in Sources */,
-				F142999020696B74007038CE /* Gpx.swift in Sources */,
-				F142998E20696B74007038CE /* OutputStream+Extensions.swift in Sources */,
-				F142998C20696B74007038CE /* GpxWriter.swift in Sources */,
+				F197CDFE20790269004F16CA /* Gpx+Parser.swift in Sources */,
+				F197CDFD20790269004F16CA /* Gpx.swift in Sources */,
+				F197CDFB20790269004F16CA /* OutputStream+Extensions.swift in Sources */,
+				F197CDF920790269004F16CA /* GpxWriter.swift in Sources */,
 				F142994820680A62007038CE /* GPXPlayerViewProtocol.swift in Sources */,
-				F142998D20696B74007038CE /* DateFormatter+Extensions.swift in Sources */,
+				F197CDFA20790269004F16CA /* DateFormatter+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +414,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -505,6 +469,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

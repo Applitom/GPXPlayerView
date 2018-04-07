@@ -143,7 +143,6 @@
 				F142994F20680BE1007038CE /* Frameworks */,
 				F142995020680BE1007038CE /* Resources */,
 				821C3D54C6BE87548ABEFC66 /* [CP] Embed Pods Frameworks */,
-				97468BF544AED7CED9B3AEBB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -162,8 +161,6 @@
 				F142996220680BE1007038CE /* Sources */,
 				F142996320680BE1007038CE /* Frameworks */,
 				F142996420680BE1007038CE /* Resources */,
-				B948A411257722762FA7F85C /* [CP] Embed Pods Frameworks */,
-				18D9D6315355C7FDA2DC3042 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -255,21 +252,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		18D9D6315355C7FDA2DC3042 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GPXPlayerViewExampleUITests/Pods-GPXPlayerViewExampleUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		821C3D54C6BE87548ABEFC66 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -290,36 +272,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GPXPlayerViewExample/Pods-GPXPlayerViewExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		97468BF544AED7CED9B3AEBB /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GPXPlayerViewExample/Pods-GPXPlayerViewExample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B948A411257722762FA7F85C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GPXPlayerViewExampleUITests/Pods-GPXPlayerViewExampleUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C59D5F6FAF5A0388C7379185 /* [CP] Check Pods Manifest.lock */ = {

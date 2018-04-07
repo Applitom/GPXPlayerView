@@ -8,15 +8,20 @@ PODS:
 DEPENDENCIES:
   - GPXPlayerView (from `..`)
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - RxSwift
+    - SWXMLHash
+
 EXTERNAL SOURCES:
   GPXPlayerView:
-    :path: ..
+    :path: ".."
 
 SPEC CHECKSUMS:
-  GPXPlayerView: 4cada220b000686a08a4567d20c7731ec33175fc
+  GPXPlayerView: 49107f32638050740e36529ef4ccc0b59baa5c87
   RxSwift: e49536837d9901277638493ea537394d4b55f570
   SWXMLHash: 3c39a53723202800e9e1a87f14b2fe7ac1da98ec
 
 PODFILE CHECKSUM: 75197ce85e9a65455298f9726b8c80c575ca11df
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.0
