@@ -9,14 +9,21 @@
 import UIKit
 import GPXPlayerView
 
-class ViewController: UIViewController {
+class GpxFileViewController: UIViewController {
 
+    public var sampleName: String?
+    
     @IBOutlet weak var gpxPlayerView: GPXPlayerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         self.gpxPlayerView.playerTrackImage = UIImage(named: "snowboard")
+        
+        if let sampleNameToLoad = self.sampleName{
+            let gpxURL = Bundle(for: GpxFileViewController.self).url(forResource: sampleNameToLoad, withExtension: "gpx")
+            self.gpxPlayerView.loadGPXFile(fromURL: gpxURL!)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,8 +32,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func loadPressed(_ sender: Any) {
-        let gpxURL = Bundle(for: ViewController.self).url(forResource: "Sample", withExtension: "gpx")
-        self.gpxPlayerView.loadGPXFile(fromURL: gpxURL!)
+        
     }
     
     @IBAction func stopPressed(_ sender: Any) {

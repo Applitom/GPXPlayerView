@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		365FEC41A5C8B372133F4756 /* Pods_GPXPlayerViewExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66457D5D9748C2C0A3213998 /* Pods_GPXPlayerViewExampleUITests.framework */; };
 		D7C88C39EBE5521BB121D340 /* Pods_GPXPlayerViewExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA04147C5331886059D9AAAD /* Pods_GPXPlayerViewExample.framework */; };
+		F12592432082A31B0025C165 /* SampleListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12592422082A31B0025C165 /* SampleListTableViewController.swift */; };
+		F12592452082A9180025C165 /* Gpx-full-sample.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F12592442082A9180025C165 /* Gpx-full-sample.gpx */; };
+		F12592472082A9670025C165 /* kuhkopfsteig-fv 2.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F12592462082A9660025C165 /* kuhkopfsteig-fv 2.gpx */; };
 		F142995620680BE1007038CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F142995520680BE1007038CE /* AppDelegate.swift */; };
-		F142995820680BE1007038CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F142995720680BE1007038CE /* ViewController.swift */; };
+		F142995820680BE1007038CE /* GpxFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F142995720680BE1007038CE /* GpxFileViewController.swift */; };
 		F142995B20680BE1007038CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F142995920680BE1007038CE /* Main.storyboard */; };
 		F142995D20680BE1007038CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F142995C20680BE1007038CE /* Assets.xcassets */; };
 		F142996020680BE1007038CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F142995E20680BE1007038CE /* LaunchScreen.storyboard */; };
@@ -34,9 +37,12 @@
 		66457D5D9748C2C0A3213998 /* Pods_GPXPlayerViewExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPXPlayerViewExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB276FC9E87BD54B1B9D6CAD /* Pods-GPXPlayerViewExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPXPlayerViewExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GPXPlayerViewExample/Pods-GPXPlayerViewExample.debug.xcconfig"; sourceTree = "<group>"; };
 		DA04147C5331886059D9AAAD /* Pods_GPXPlayerViewExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPXPlayerViewExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F12592422082A31B0025C165 /* SampleListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleListTableViewController.swift; sourceTree = "<group>"; };
+		F12592442082A9180025C165 /* Gpx-full-sample.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Gpx-full-sample.gpx"; sourceTree = "<group>"; };
+		F12592462082A9660025C165 /* kuhkopfsteig-fv 2.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "kuhkopfsteig-fv 2.gpx"; sourceTree = "<group>"; };
 		F142995220680BE1007038CE /* GPXPlayerViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPXPlayerViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F142995520680BE1007038CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F142995720680BE1007038CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F142995720680BE1007038CE /* GpxFileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GpxFileViewController.swift; sourceTree = "<group>"; };
 		F142995A20680BE1007038CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F142995C20680BE1007038CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F142995F20680BE1007038CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -112,12 +118,15 @@
 			isa = PBXGroup;
 			children = (
 				F18767DA206974570087295F /* Sample.gpx */,
+				F12592442082A9180025C165 /* Gpx-full-sample.gpx */,
+				F12592462082A9660025C165 /* kuhkopfsteig-fv 2.gpx */,
 				F142995520680BE1007038CE /* AppDelegate.swift */,
-				F142995720680BE1007038CE /* ViewController.swift */,
+				F142995720680BE1007038CE /* GpxFileViewController.swift */,
 				F142995920680BE1007038CE /* Main.storyboard */,
 				F142995C20680BE1007038CE /* Assets.xcassets */,
 				F142995E20680BE1007038CE /* LaunchScreen.storyboard */,
 				F142996120680BE1007038CE /* Info.plist */,
+				F12592422082A31B0025C165 /* SampleListTableViewController.swift */,
 			);
 			path = GPXPlayerViewExample;
 			sourceTree = "<group>";
@@ -220,7 +229,9 @@
 				F142996020680BE1007038CE /* LaunchScreen.storyboard in Resources */,
 				F18767DB206974570087295F /* Sample.gpx in Resources */,
 				F142995D20680BE1007038CE /* Assets.xcassets in Resources */,
+				F12592452082A9180025C165 /* Gpx-full-sample.gpx in Resources */,
 				F142995B20680BE1007038CE /* Main.storyboard in Resources */,
+				F12592472082A9670025C165 /* kuhkopfsteig-fv 2.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,8 +310,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F142995820680BE1007038CE /* ViewController.swift in Sources */,
+				F142995820680BE1007038CE /* GpxFileViewController.swift in Sources */,
 				F142995620680BE1007038CE /* AppDelegate.swift in Sources */,
+				F12592432082A31B0025C165 /* SampleListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
