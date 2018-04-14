@@ -12,6 +12,8 @@ import CoreLocation
 protocol GPXPlayerViewProtocol: class {
     
     func addTrackToMap(track: [CLLocationCoordinate2D])
+    func addWaypointToMap(waypoint: CLLocationCoordinate2D)
+    func addRouteToMap(route: [CLLocationCoordinate2D])
     func setMapCenter(center: CLLocationCoordinate2D)
     func zoomToFit(track: [CLLocationCoordinate2D])
     func initPlayer()

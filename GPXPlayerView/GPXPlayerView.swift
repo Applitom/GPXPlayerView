@@ -9,10 +9,18 @@
 import UIKit
 import MapKit
 
+class TrackPlayerPositionAnnotation: MKPointAnnotation {}
+class WaypointAnnotation: MKPointAnnotation {}
+
+class TrackPolyline: MKPolyline {}
+class RoutePolyline: MKPolyline {}
+
 public class GPXPlayerView: UIView {
     
     public var playerTrackImage: UIImage?
-    private var currentTrackAnnotation: MKPointAnnotation?
+    public var waypointImage: UIImage?
+    
+    private var currentTrackAnnotation: TrackPlayerPositionAnnotation?
     private let gpxPlayerViewPresenter = GPXPlayerViewPresenter()
     private let mapView: MKMapView = MKMapView()
     
@@ -49,8 +57,9 @@ public class GPXPlayerView: UIView {
 
 // MARK: --- GPXPlayerViewProtocol ---
 extension GPXPlayerView: GPXPlayerViewProtocol{
+    
     func initPlayer() {
-        self.currentTrackAnnotation = MKPointAnnotation()
+        self.currentTrackAnnotation = TrackPlayerPositionAnnotation()
         self.mapView.addAnnotation(self.currentTrackAnnotation!)
     }
     
@@ -65,8 +74,20 @@ extension GPXPlayerView: GPXPlayerViewProtocol{
     }
     
     func addTrackToMap(track: [CLLocationCoordinate2D]) {
-        let polyline = MKPolyline(coordinates: track, count: track.count)
+        let polyline = TrackPolyline(coordinates: track, count: track.count)
         self.mapView.add(polyline)
+    }
+    
+    func addRouteToMap(route: [CLLocationCoordinate2D]) {
+        let polyline = RoutePolyline(coordinates: route, count: route.count)
+        self.mapView.add(polyline)
+    }
+    
+    func addWaypointToMap(waypoint: CLLocationCoordinate2D) {
+        let waypointAnnotation = WaypointAnnotation()
+        waypointAnnotation.coordinate = waypoint
+        
+        self.mapView.addAnnotation(waypointAnnotation)
     }
     
     func setMapCenter(center: CLLocationCoordinate2D) {
@@ -84,30 +105,56 @@ extension GPXPlayerView: MKMapViewDelegate{
         let polylineRenderer = MKPolylineRenderer(overlay: overlay)
         polylineRenderer.strokeColor = UIColor.blue
         polylineRenderer.lineWidth = 3
+        
+        if (overlay is RoutePolyline){
+            polylineRenderer.strokeColor = UIColor.red
+        }
         return polylineRenderer
     }
     
     public func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        guard self.playerTrackImage != nil else {
-            return nil
-        }
-        
         if annotation is MKUserLocation {
             return nil
         }
         
-        let identifier = "TrackAnnotation"
+        if annotation is TrackPlayerPositionAnnotation && self.playerTrackImage != nil {
+            return buildTrackPlayerPositionAnnotationView(mapView: mapView, viewFor: annotation)
+        }
+        else if annotation is WaypointAnnotation && self.waypointImage != nil {
+            return buildWaypointAnnotationView(mapView: mapView, viewFor: annotation)
+        }
+
+        return nil
+    }
+    
+    private func buildTrackPlayerPositionAnnotationView(mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView{
+        let identifier = "TrackPlayerPositionAnnotation"
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
         
         if annotationView == nil {
             annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             annotationView?.canShowCallout = true
-            annotationView?.image = playerTrackImage
+            annotationView?.image = self.playerTrackImage
         } else {
             annotationView?.annotation = annotation
         }
         
-        return annotationView
+        return annotationView!
+    }
+    
+    private func buildWaypointAnnotationView(mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView{
+        let identifier = "WaypointAnnotation"
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+        
+        if annotationView == nil {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView?.canShowCallout = true
+            annotationView?.image = self.waypointImage
+        } else {
+            annotationView?.annotation = annotation
+        }
+        
+        return annotationView!
     }
 }
 

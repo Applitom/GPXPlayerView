@@ -42,6 +42,15 @@ class GPXPlayerViewPresenter {
             self.flatTrackLocations?.append(contentsOf: locations)
         }
         
+        for currentWaypoint in (self.gpxFileData?.waypoints)!{
+            self.gpxPlayerView?.addWaypointToMap(waypoint: currentWaypoint.coordinate)
+        }
+        
+        if let route = self.gpxFileData?.route{
+            let routePoints = route.map { $0.coordinate }
+            self.gpxPlayerView?.addRouteToMap(route: routePoints)
+        }
+        
         if self.flatTrackLocations != nil && self.flatTrackLocations!.count > 0{
             self.gpxPlayerView?.zoomToFit(track: self.flatTrackLocations!)
         }
