@@ -12,6 +12,7 @@
 		F12592432082A31B0025C165 /* SampleListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12592422082A31B0025C165 /* SampleListTableViewController.swift */; };
 		F12592452082A9180025C165 /* Gpx-full-sample.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F12592442082A9180025C165 /* Gpx-full-sample.gpx */; };
 		F12592472082A9670025C165 /* kuhkopfsteig-fv 2.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F12592462082A9660025C165 /* kuhkopfsteig-fv 2.gpx */; };
+		F12592492085AA7D0025C165 /* half_dome.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F12592482085AA7C0025C165 /* half_dome.gpx */; };
 		F142995620680BE1007038CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F142995520680BE1007038CE /* AppDelegate.swift */; };
 		F142995820680BE1007038CE /* GpxFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F142995720680BE1007038CE /* GpxFileViewController.swift */; };
 		F142995B20680BE1007038CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F142995920680BE1007038CE /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		F12592422082A31B0025C165 /* SampleListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleListTableViewController.swift; sourceTree = "<group>"; };
 		F12592442082A9180025C165 /* Gpx-full-sample.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Gpx-full-sample.gpx"; sourceTree = "<group>"; };
 		F12592462082A9660025C165 /* kuhkopfsteig-fv 2.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "kuhkopfsteig-fv 2.gpx"; sourceTree = "<group>"; };
+		F12592482085AA7C0025C165 /* half_dome.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = half_dome.gpx; sourceTree = "<group>"; };
 		F142995220680BE1007038CE /* GPXPlayerViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPXPlayerViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F142995520680BE1007038CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F142995720680BE1007038CE /* GpxFileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GpxFileViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			children = (
 				F18767DA206974570087295F /* Sample.gpx */,
 				F12592442082A9180025C165 /* Gpx-full-sample.gpx */,
+				F12592482085AA7C0025C165 /* half_dome.gpx */,
 				F12592462082A9660025C165 /* kuhkopfsteig-fv 2.gpx */,
 				F142995520680BE1007038CE /* AppDelegate.swift */,
 				F142995720680BE1007038CE /* GpxFileViewController.swift */,
@@ -226,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F12592492085AA7D0025C165 /* half_dome.gpx in Resources */,
 				F142996020680BE1007038CE /* LaunchScreen.storyboard in Resources */,
 				F18767DB206974570087295F /* Sample.gpx in Resources */,
 				F142995D20680BE1007038CE /* Assets.xcassets in Resources */,
