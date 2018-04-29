@@ -59,12 +59,21 @@ class GPXPlayerViewPresenter {
     }
     
     public func play(){
-        guard self.currentPlayerState != .undefined else { return }
-        
-        self.currentPlayingIndex = 0
-        self.gpxPlayerView?.initPlayer()
-        self.playerTimer = self.buildPlayerTimer()
-        self.currentPlayerState = .playing
+        switch self.currentPlayerState {
+        case .playing:
+            break
+        case .undefined:
+            break
+        case .paused:
+            self.pauseResume()
+            break
+        default:
+            self.currentPlayingIndex = 0
+            self.gpxPlayerView?.initPlayer()
+            self.playerTimer = self.buildPlayerTimer()
+            self.currentPlayerState = .playing
+            break
+        }
     }
     
     public func stop(){
