@@ -51,8 +51,14 @@ class GPXPlayerViewPresenter {
             self.gpxPlayerView?.addRouteToMap(route: routePoints)
         }
         
+        // If file contains track data, fit the map to display the track
         if self.flatTrackLocations != nil && self.flatTrackLocations!.count > 0{
             self.gpxPlayerView?.zoomToFit(track: self.flatTrackLocations!)
+        }
+        // Else if file contains route data, fit the map to display the route
+        else if (self.gpxFileData?.route != nil && self.gpxFileData!.route!.count > 0){
+            let routePoints = self.gpxFileData?.route!.map { $0.coordinate }
+            self.gpxPlayerView?.zoomToFit(track: routePoints!)
         }
         
         self.currentPlayerState = .stopped

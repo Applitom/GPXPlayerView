@@ -10,7 +10,7 @@ import UIKit
 
 class SampleListTableViewController: UITableViewController {
     
-    let samples = ["Sample","Gpx-full-sample","kuhkopfsteig-fv 2","half_dome"]
+    let samples = ["Sample","Gpx-full-sample","kuhkopfsteig-fv 2","half_dome","file with route"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

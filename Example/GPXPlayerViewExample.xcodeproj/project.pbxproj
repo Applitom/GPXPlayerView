@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		365FEC41A5C8B372133F4756 /* Pods_GPXPlayerViewExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66457D5D9748C2C0A3213998 /* Pods_GPXPlayerViewExampleUITests.framework */; };
 		D7C88C39EBE5521BB121D340 /* Pods_GPXPlayerViewExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA04147C5331886059D9AAAD /* Pods_GPXPlayerViewExample.framework */; };
+		F10CEA7A2097A2A200A7DD23 /* file with route.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F10CEA792097A2A200A7DD23 /* file with route.gpx */; };
 		F12592432082A31B0025C165 /* SampleListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12592422082A31B0025C165 /* SampleListTableViewController.swift */; };
 		F12592452082A9180025C165 /* Gpx-full-sample.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F12592442082A9180025C165 /* Gpx-full-sample.gpx */; };
 		F12592472082A9670025C165 /* kuhkopfsteig-fv 2.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F12592462082A9660025C165 /* kuhkopfsteig-fv 2.gpx */; };
@@ -38,6 +39,7 @@
 		66457D5D9748C2C0A3213998 /* Pods_GPXPlayerViewExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPXPlayerViewExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB276FC9E87BD54B1B9D6CAD /* Pods-GPXPlayerViewExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPXPlayerViewExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GPXPlayerViewExample/Pods-GPXPlayerViewExample.debug.xcconfig"; sourceTree = "<group>"; };
 		DA04147C5331886059D9AAAD /* Pods_GPXPlayerViewExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPXPlayerViewExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F10CEA792097A2A200A7DD23 /* file with route.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "file with route.gpx"; sourceTree = "<group>"; };
 		F12592422082A31B0025C165 /* SampleListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleListTableViewController.swift; sourceTree = "<group>"; };
 		F12592442082A9180025C165 /* Gpx-full-sample.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Gpx-full-sample.gpx"; sourceTree = "<group>"; };
 		F12592462082A9660025C165 /* kuhkopfsteig-fv 2.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "kuhkopfsteig-fv 2.gpx"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				F12592442082A9180025C165 /* Gpx-full-sample.gpx */,
 				F12592482085AA7C0025C165 /* half_dome.gpx */,
 				F12592462082A9660025C165 /* kuhkopfsteig-fv 2.gpx */,
+				F10CEA792097A2A200A7DD23 /* file with route.gpx */,
 				F142995520680BE1007038CE /* AppDelegate.swift */,
 				F142995720680BE1007038CE /* GpxFileViewController.swift */,
 				F142995920680BE1007038CE /* Main.storyboard */,
@@ -232,6 +235,7 @@
 				F12592492085AA7D0025C165 /* half_dome.gpx in Resources */,
 				F142996020680BE1007038CE /* LaunchScreen.storyboard in Resources */,
 				F18767DB206974570087295F /* Sample.gpx in Resources */,
+				F10CEA7A2097A2A200A7DD23 /* file with route.gpx in Resources */,
 				F142995D20680BE1007038CE /* Assets.xcassets in Resources */,
 				F12592452082A9180025C165 /* Gpx-full-sample.gpx in Resources */,
 				F142995B20680BE1007038CE /* Main.storyboard in Resources */,
