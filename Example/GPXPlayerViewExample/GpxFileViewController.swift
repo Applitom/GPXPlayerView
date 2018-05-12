@@ -20,6 +20,12 @@ class GpxFileViewController: UIViewController {
         
         self.gpxPlayerView.playerTrackImage = UIImage(named: "snowboard")
         
+        self.gpxPlayerView.routePolylineStyle.strokeColor = UIColor.red
+        self.gpxPlayerView.routePolylineStyle.lineWidth = 1
+        
+        self.gpxPlayerView.trackPolylineStyle.strokeColor = UIColor.white
+        self.gpxPlayerView.trackPolylineStyle.lineWidth = 2
+        
         if let sampleNameToLoad = self.sampleName{
             let gpxURL = Bundle(for: GpxFileViewController.self).url(forResource: sampleNameToLoad, withExtension: "gpx")
             self.gpxPlayerView.loadGPXFile(fromURL: gpxURL!)
@@ -31,10 +37,6 @@ class GpxFileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func loadPressed(_ sender: Any) {
-        
-    }
-    
     @IBAction func stopPressed(_ sender: Any) {
         self.gpxPlayerView.stop()
     }

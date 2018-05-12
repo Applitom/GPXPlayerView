@@ -31,25 +31,13 @@ class GPXPlayerViewPresenter {
     }
     
     public func loadGPXFile(fromURL url:URL){
+        
+        // Load GPX File
         let gpxData = try! Data(contentsOf: url)
-        
         self.gpxFileData = try! Gpx(data: gpxData)
-        self.flatTrackLocations = [CLLocationCoordinate2D]()
         
-        for currentTrack in (self.gpxFileData?.track!)! {
-            let locations = currentTrack.map { $0.coordinate }
-            self.gpxPlayerView?.addTrackToMap(track: locations)
-            self.flatTrackLocations?.append(contentsOf: locations)
-        }
-        
-        for currentWaypoint in (self.gpxFileData?.waypoints)!{
-            self.gpxPlayerView?.addWaypointToMap(waypoint: currentWaypoint.coordinate)
-        }
-        
-        if let route = self.gpxFileData?.route{
-            let routePoints = route.map { $0.coordinate }
-            self.gpxPlayerView?.addRouteToMap(route: routePoints)
-        }
+        // Add GPX File Data to Map
+        self.updateGPXDataOnMap()
         
         // If file contains track data, fit the map to display the track
         if self.flatTrackLocations != nil && self.flatTrackLocations!.count > 0{
@@ -99,6 +87,28 @@ class GPXPlayerViewPresenter {
         else if (self.currentPlayerState == .paused){
             self.playerTimer = self.buildPlayerTimer()
             self.currentPlayerState = .playing
+        }
+    }
+    
+    public func updateGPXDataOnMap(){
+        
+        guard self.gpxFileData != nil else { return }
+        
+        self.flatTrackLocations = [CLLocationCoordinate2D]()
+        
+        for currentTrack in (self.gpxFileData?.track!)! {
+            let locations = currentTrack.map { $0.coordinate }
+            self.gpxPlayerView?.addTrackToMap(track: locations)
+            self.flatTrackLocations?.append(contentsOf: locations)
+        }
+        
+        for currentWaypoint in (self.gpxFileData?.waypoints)!{
+            self.gpxPlayerView?.addWaypointToMap(waypoint: currentWaypoint.coordinate)
+        }
+        
+        if let route = self.gpxFileData?.route{
+            let routePoints = route.map { $0.coordinate }
+            self.gpxPlayerView?.addRouteToMap(route: routePoints)
         }
     }
     

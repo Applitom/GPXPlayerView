@@ -15,10 +15,28 @@ class WaypointAnnotation: MKPointAnnotation {}
 class TrackPolyline: MKPolyline {}
 class RoutePolyline: MKPolyline {}
 
+public struct GPXViewPolylineStyle{
+    public var strokeColor: UIColor = UIColor.blue
+    public var lineWidth: CGFloat = 3
+}
+
 public class GPXPlayerView: UIView {
     
     public var playerTrackImage: UIImage?
     public var waypointImage: UIImage?
+    public var trackPolylineStyle = GPXViewPolylineStyle(){
+        didSet{
+            self.mapView.removeOverlays(self.mapView.overlays)
+            self.gpxPlayerViewPresenter.updateGPXDataOnMap()
+        }
+    }
+    
+    public var routePolylineStyle = GPXViewPolylineStyle(){
+        didSet{
+            self.mapView.removeOverlays(self.mapView.overlays)
+            self.gpxPlayerViewPresenter.updateGPXDataOnMap()
+        }
+    }
     
     private var currentTrackAnnotation: TrackPlayerPositionAnnotation?
     private let gpxPlayerViewPresenter = GPXPlayerViewPresenter()
@@ -102,13 +120,18 @@ extension GPXPlayerView: GPXPlayerViewProtocol{
 // MARK: --- MKMapViewDelegate ---
 extension GPXPlayerView: MKMapViewDelegate{
     public func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        
         let polylineRenderer = MKPolylineRenderer(overlay: overlay)
-        polylineRenderer.strokeColor = UIColor.blue
-        polylineRenderer.lineWidth = 3
         
         if (overlay is RoutePolyline){
-            polylineRenderer.strokeColor = UIColor.red
+            polylineRenderer.strokeColor = self.routePolylineStyle.strokeColor
+            polylineRenderer.lineWidth = self.routePolylineStyle.lineWidth
         }
+        else if (overlay is TrackPolyline){
+            polylineRenderer.strokeColor = self.trackPolylineStyle.strokeColor
+            polylineRenderer.lineWidth = self.trackPolylineStyle.lineWidth
+        }
+        
         return polylineRenderer
     }
     
